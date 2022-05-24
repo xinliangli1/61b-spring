@@ -2,9 +2,9 @@ package deque;
 
 public class ArrayDeque<Type> {
     public  Type[] items;
-    private int nextFirst;
-    private int nextLast;
-    private int size;
+    public int nextFirst;
+    public int nextLast;
+    public int size;
 
     public ArrayDeque() {
         items= (Type[]) new Object[8];
@@ -13,7 +13,7 @@ public class ArrayDeque<Type> {
         nextLast=2;
     }
 
-    private void resize(int capacity) {
+    public void resize(int capacity) {
         Type[] a=(Type[]) new Object[capacity];
         int t=nextFirst;
         nextFirst=nextFirst+a.length- size-1;
